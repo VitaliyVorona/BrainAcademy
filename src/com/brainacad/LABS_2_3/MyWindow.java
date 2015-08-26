@@ -1,4 +1,4 @@
-package com.brainacad.LABS_2_3.labs_2_3_1;
+package com.brainacad.LABS_2_3;
 
 /**
  * Created by User on 14.08.2015.
