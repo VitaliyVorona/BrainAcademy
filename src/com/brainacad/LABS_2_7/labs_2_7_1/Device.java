@@ -31,4 +31,11 @@ public class Device {
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
+
+    @Override
+    public String toString() {
+
+        System.out.println(getClass().getSimpleName() + " manufacture =" + getManufacturer() + ", price =" + getPrice() + ", serialNumber=");
+        return getClass().getName() + "manufacture =" + getManufacturer() + ", price =" + getPrice() + ", serialNumber=";
+    }
 }
