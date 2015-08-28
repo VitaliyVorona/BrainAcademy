@@ -40,4 +40,11 @@ public class Monitor extends Device {
     public void setMac(String mac) {
         this.mac = mac;
     }
+
+    @Override
+    public String toString() {
+
+        System.out.println(getClass().getSimpleName() + " manufacture =" + getManufacturer() + ", price =" + getPrice() + ", serialNumber=" + getSerialNumber());
+        return getClass().getName() + "manufacture =" + getManufacturer() + ", price =" + getPrice() + ", serialNumber=";
+    }
 }
