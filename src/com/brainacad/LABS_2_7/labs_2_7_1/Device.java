@@ -33,9 +33,17 @@ public class Device {
     }
 
     @Override
+    public boolean equals(Object a) {
+        if (a == null)return false;
+        if (!(a instanceof Device)) return false;
+        if (a == this)return true;
+        return true;
+    }
+
+    @Override
     public String toString() {
 
-        System.out.println(getClass().getSimpleName() + " manufacture =" + getManufacturer() + ", price =" + getPrice() + ", serialNumber=" + getSerialNumber());
-        return getClass().getName() + "manufacture =" + getManufacturer() + ", price =" + getPrice() + ", serialNumber=";
+//        System.out.println(getClass().getSimpleName() + " manufacture = " + getManufacturer() + ", price = " + getPrice() + ", serialNumber = " + getSerialNumber());
+        return getClass().getSimpleName() + " manufacture = " + getManufacturer() + ", price = " + getPrice() + ", serialNumber = ";
     }
 }

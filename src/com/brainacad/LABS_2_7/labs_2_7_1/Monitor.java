@@ -9,6 +9,13 @@ public class Monitor extends Device {
     private int EthernetAdapter;
     private String mac;
 
+    public Monitor(int resolutionX, int resolutionY, int EthernetAdapter, String mac){
+        this.resolutionX = resolutionX;
+        this.resolutionY = resolutionY;
+        this.EthernetAdapter = EthernetAdapter;
+        this.mac = mac;
+    }
+
     public int getResolutionX() {
         return resolutionX;
     }
