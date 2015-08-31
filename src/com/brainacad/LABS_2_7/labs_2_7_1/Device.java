@@ -8,6 +8,14 @@ public class Device {
     private float price;
     private String serialNumber;
 
+//    public Device(){}
+
+    public Device(String manufacturer, float price, String serialNumber){
+        this.manufacturer = manufacturer;
+        this.price = price;
+        this.serialNumber = serialNumber;
+    }
+
     public String getManufacturer() {
         return manufacturer;
     }
@@ -43,7 +51,6 @@ public class Device {
     @Override
     public String toString() {
 
-//        System.out.println(getClass().getSimpleName() + " manufacture = " + getManufacturer() + ", price = " + getPrice() + ", serialNumber = " + getSerialNumber());
         return getClass().getSimpleName() + " manufacture = " + getManufacturer() + ", price = " + getPrice() + ", serialNumber = ";
     }
 }

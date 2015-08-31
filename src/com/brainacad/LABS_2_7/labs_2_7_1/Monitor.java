@@ -6,13 +6,12 @@ package com.brainacad.LABS_2_7.labs_2_7_1;
 public class Monitor extends Device {
     private int resolutionX;
     private int resolutionY;
-    private int EthernetAdapter;
     private String mac;
 
-    public Monitor(int resolutionX, int resolutionY, int EthernetAdapter, String mac){
+    public Monitor(String manufac, int price, String serialNumber, int resolutionX, int resolutionY, int EthernetAdapter, String mac){
+        super(manufac, price, serialNumber);
         this.resolutionX = resolutionX;
         this.resolutionY = resolutionY;
-        this.EthernetAdapter = EthernetAdapter;
         this.mac = mac;
     }
 
@@ -32,14 +31,6 @@ public class Monitor extends Device {
         this.resolutionY = resolutionY;
     }
 
-    public int getEthernetAdapter() {
-        return EthernetAdapter;
-    }
-
-    public void setEthernetAdapter(int ethernetAdapter) {
-        EthernetAdapter = ethernetAdapter;
-    }
-
     public String getMac() {
         return mac;
     }
@@ -51,7 +42,6 @@ public class Monitor extends Device {
     @Override
     public String toString() {
 
-        System.out.println(getClass().getSimpleName() + " manufacture =" + getManufacturer() + ", price =" + getPrice() + ", serialNumber=" + getSerialNumber());
-        return getClass().getName() + "manufacture =" + getManufacturer() + ", price =" + getPrice() + ", serialNumber=";
+        return super.toString() + getResolutionX() + " x " + getResolutionY();
     }
 }
