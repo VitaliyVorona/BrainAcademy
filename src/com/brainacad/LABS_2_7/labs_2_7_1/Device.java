@@ -51,6 +51,6 @@ public class Device {
     @Override
     public String toString() {
 
-        return getClass().getSimpleName() + " manufacture = " + getManufacturer() + ", price = " + getPrice() + ", serialNumber = ";
+        return getClass().getSimpleName() + " manufacture = " + getManufacturer() + ", price = " + getPrice() + ", serialNumber = " + getSerialNumber();
     }
 }

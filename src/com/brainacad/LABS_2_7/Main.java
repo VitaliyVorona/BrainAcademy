@@ -3,13 +3,15 @@ package com.brainacad.LABS_2_7;
 import com.brainacad.LABS_2_7.labs_2_7_1.Device;
 import com.brainacad.LABS_2_7.labs_2_7_1.EthernetAdapter;
 import com.brainacad.LABS_2_7.labs_2_7_1.Monitor;
+import com.brainacad.LABS_2_7.labs_2_7_6.Cirlce;
+import com.brainacad.LABS_2_7.labs_2_7_6.Shape;
 
 /**
  * Created by User on 26.08.2015.
  */
 public class Main {
     public static void main(String[] args) {
-        Device mon = new Device("Apple", 23, "ABS2134e2");
+        /*Device mon = new Device("Apple", 23, "ABS2134e2");
         System.out.println(mon.toString());
 
         Device[] devices = new Device[2];
@@ -18,7 +20,12 @@ public class Main {
 
         for (Device i : devices) {
             System.out.println(i.toString());
-        }
+        }*/
+
+        Shape shape = new Shape("GREEN");
+        Cirlce cirlce = new Cirlce("ORANGE", 10);
+        System.out.println(shape.toString());
+        System.out.println(cirlce.toString());
     }
 
 }
