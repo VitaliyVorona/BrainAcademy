@@ -3,6 +3,7 @@ package com.brainacad.LABS_2_7;
 import com.brainacad.LABS_2_7.labs_2_7_6.Cirlce;
 import com.brainacad.LABS_2_7.labs_2_7_6.Rectangle;
 import com.brainacad.LABS_2_7.labs_2_7_6.Shape;
+import com.brainacad.LABS_2_7.labs_2_7_6.Triangle;
 
 /**
  * Created by User on 26.08.2015.
@@ -21,11 +22,13 @@ public class Main {
         }*/
         Shape shape = new Shape("GREEN");
         Cirlce cirlce = new Cirlce("ORANGE", 10);
-        Rectangle rectangle = new Rectangle("ORANGE", 11, 22);
+        Rectangle rectangle = new Rectangle("RED", 11, 22);
+        Triangle triangle = new Triangle("RED", 5, 5, 5);
 
         System.out.println(shape.toString());
         System.out.println(cirlce.toString());
         System.out.println(rectangle.toString());
+        System.out.println(triangle.toString());
     }
 
 }
