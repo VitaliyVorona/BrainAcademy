@@ -1,9 +1,7 @@
 package com.brainacad.LABS_2_7;
 
-import com.brainacad.LABS_2_7.labs_2_7_1.Device;
-import com.brainacad.LABS_2_7.labs_2_7_1.EthernetAdapter;
-import com.brainacad.LABS_2_7.labs_2_7_1.Monitor;
 import com.brainacad.LABS_2_7.labs_2_7_6.Cirlce;
+import com.brainacad.LABS_2_7.labs_2_7_6.Rectangle;
 import com.brainacad.LABS_2_7.labs_2_7_6.Shape;
 
 /**
@@ -21,11 +19,13 @@ public class Main {
         for (Device i : devices) {
             System.out.println(i.toString());
         }*/
-
         Shape shape = new Shape("GREEN");
         Cirlce cirlce = new Cirlce("ORANGE", 10);
+        Rectangle rectangle = new Rectangle("ORANGE", 11, 22);
+
         System.out.println(shape.toString());
         System.out.println(cirlce.toString());
+        System.out.println(rectangle.toString());
     }
 
 }

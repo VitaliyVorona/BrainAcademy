@@ -10,14 +10,14 @@ public class Shape {
         this.shapeColor = shapeColor;
     }
 
-    public double calcShape() {
+    public double calcArea() {
         double area = 0;
         return area;
     }
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + " , color is : "  + shapeColor;
+        return "This is " + getClass().getSimpleName() + ", color : " + shapeColor + ",";
     }
 }
 

@@ -16,13 +16,13 @@ public class Cirlce extends Shape {
     }
 
     @Override
-    public double calcShape() {
+    public double calcArea() {
         double area = PI * radius * radius;
         return area;
     }
 
     @Override
     public String toString() {
-        return super.toString() +  " shape area is = " + calcShape();
+        return super.toString() +  '\n' + "Shape area is = " + calcArea();
     }
 }
