@@ -1,5 +1,7 @@
 package com.brainacad.LABS_2_7.labs_2_7_6;
 
+import com.sun.xml.internal.ws.message.saaj.SAAJHeader;
+
 /**
  * Created by Vitaliy.Vorona on 9/2/2015.
  */
@@ -23,6 +25,14 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return super.toString() + '\t' + "width = " + width + ", height = " + height +'\n' + "Shape are is: " + calcArea();
+        return super.toString() + '\t' + "width = " + width + ", height = " + height +'\n' + "Shape area is: " + calcArea();
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Shape obj = (Rectangle)o;
+        if (this.calcArea() < obj.calcArea()) {return -1;}
+        if (this.calcArea() > obj.calcArea()) {return 1;}
+        else return 0;
     }
 }

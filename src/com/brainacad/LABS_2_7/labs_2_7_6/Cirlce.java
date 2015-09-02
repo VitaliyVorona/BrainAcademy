@@ -25,4 +25,12 @@ public class Cirlce extends Shape {
     public String toString() {
         return super.toString() +  '\n' + "Shape area is = " + calcArea();
     }
+
+    @Override
+    public int compareTo(Object o) {
+        Shape obj = (Cirlce)o;
+        if (this.calcArea() < obj.calcArea()) {return -1;}
+        if (this.calcArea() > obj.calcArea()) {return 1;}
+        else return 0;
+    }
 }

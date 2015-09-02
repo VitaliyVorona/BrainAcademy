@@ -18,12 +18,17 @@ public class Triangle extends Shape {
     @Override
     public double calcArea() {
         double x = (a + b + c)/2;
-        double area = Math.sqrt(x*(x-a)*(x-b)*(x-c));
+        double area = Math.sqrt(x * (x - a) * (x - b) * (x - c));
         return area;
     }
 
     @Override
     public String toString() {
-        return super.toString() + '\t' + "a=" + a + ", b=" + b + ", c=" + c + '\n' + "Shape are is: " + calcArea();
+        return super.toString() + '\t' + "a = " + a + ", b = " + b + ", c = " + c + '\n' + "Shape area is: " + calcArea();
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
