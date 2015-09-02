@@ -23,6 +23,6 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return super.toString() + "width = " + width + "height = " + height +'\n' + "Shape are is: " + calcArea();
+        return super.toString() + '\t' + "width = " + width + ", height = " + height +'\n' + "Shape are is: " + calcArea();
     }
 }
