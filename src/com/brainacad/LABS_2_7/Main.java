@@ -27,7 +27,7 @@ public class Main {
 //        Triangle triangle5 = new Triangle("SRED", 54, 35, 25);
 //        triangle2, triangle3, triangle4, triangle5,
         Shape[] shapes = new Shape[]{triangle1, cirlce1, cirlce2, rectangle1, rectangle2};
-        System.out.println(rectangle1.compareTo(rectangle2));
+        System.out.println(rectangle1.compareTo(cirlce1));
         for (Shape i : shapes) {
 //            System.out.println(i.);
 //            area = area + i.calcArea();

@@ -28,7 +28,7 @@ public class Cirlce extends Shape {
 
     @Override
     public int compareTo(Object o) {
-        Shape obj = (Cirlce)o;
+        Shape obj = (Shape)o;
         if (this.calcArea() < obj.calcArea()) {return -1;}
         if (this.calcArea() > obj.calcArea()) {return 1;}
         else return 0;

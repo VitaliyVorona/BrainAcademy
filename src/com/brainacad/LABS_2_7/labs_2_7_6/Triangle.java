@@ -29,6 +29,9 @@ public class Triangle extends Shape {
 
     @Override
     public int compareTo(Object o) {
-        return 0;
+        Shape obj = (Shape)o;
+        if (this.calcArea() < obj.calcArea()) {return -1;}
+        if (this.calcArea() > obj.calcArea()) {return 1;}
+        else return 0;
     }
 }
