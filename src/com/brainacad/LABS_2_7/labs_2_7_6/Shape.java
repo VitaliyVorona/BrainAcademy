@@ -39,25 +39,25 @@ public abstract class Shape implements Drawable, Comparable {
 
     public static String[] paramsRectangle(String params) {
         String[] paramsList = new String[3];
-        paramsList[0] = params.substring(params.indexOf(":"), params.lastIndexOf(":"));
-        paramsList[1] = params.substring(params.lastIndexOf(":"), params.indexOf(","));
+        paramsList[0] = params.substring(params.indexOf(":")+1, params.lastIndexOf(":"));
+        paramsList[1] = params.substring(params.lastIndexOf(":")+1, params.indexOf(","));
         paramsList[2] = params.substring(params.indexOf(","), params.length());
         return paramsList;
     }
 
     public static String[] paramsTriangle(String params) {
-        String[] paramsList = new String[3];
-        paramsList[0] = params.substring(params.indexOf(":"), params.lastIndexOf(":"));
-        paramsList[1] = params.substring(params.lastIndexOf(":"), params.indexOf(","));
-        paramsList[2] = params.substring(params.indexOf(","), params.lastIndexOf(","));
-        paramsList[3] = params.substring(params.lastIndexOf(","), params.length());
+        String[] paramsList = new String[4];
+        paramsList[0] = params.substring(params.indexOf(":")+1, params.lastIndexOf(":"));
+        paramsList[1] = params.substring(params.lastIndexOf(":")+1, params.indexOf(","));
+        paramsList[2] = params.substring(params.indexOf(",")+1, params.lastIndexOf(","));
+        paramsList[3] = params.substring(params.lastIndexOf(",")+1, params.length());
         return paramsList;
     }
 
     public static String[] paramsCircle(String params) {
-        String[] paramsList = new String[3];
-        paramsList[0] = params.substring(params.indexOf(":"), params.lastIndexOf(":"));
-        paramsList[1] = params.substring(params.lastIndexOf(":"+1), params.length());
+        String[] paramsList = new String[2];
+        paramsList[0] = params.substring(params.indexOf(":")+1, params.lastIndexOf(":"));
+        paramsList[1] = params.substring(params.lastIndexOf(":")+1, params.length());
         return paramsList;
     }
 

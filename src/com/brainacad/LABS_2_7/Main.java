@@ -12,7 +12,8 @@ public class Main {
     public static void main(String[] args) {
         Shape cirlce = Shape.parseShape("Circle:BLACK:10");
         Shape triangle = Shape.parseShape("Triangle:GREEN:9,7,12");
-        cirlce.toString();
+        System.out.println(triangle.toString());
+        System.out.println(cirlce.toString());
     }
 
 }
