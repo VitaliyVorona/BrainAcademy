@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Hello World");
         String myStr1 = "Cartoon";
         String myStr2 = "Tomcat";
-        char[] ch = uniqueChars("asdfasdfasdffeeefhfhgfh");
+        char[] ch = uniqueChars("asdfasdfasdffeeebfhfhgfh");
         for (char i : ch){
             System.out.println(i);
         }
@@ -31,7 +31,7 @@ public class Main {
     }
 
     public static char[] uniqueChars(String s) {
-        StringBuilder builder = new StringBuilder(s);
+        StringBuilder builder = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             if (s.lastIndexOf(ch) == s.indexOf(ch)) {
