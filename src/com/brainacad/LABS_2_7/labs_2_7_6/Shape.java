@@ -22,42 +22,45 @@ public abstract class Shape implements Drawable, Comparable {
     public static Shape parseShape(String obj) throws NullPointerException {
         String shape = obj.substring(0, obj.indexOf(":"));
         Shape shapeObj = null;
-        if (shape.equals("Rectangle")) {
-            String[] params = paramsRectangle(obj);
-            shapeObj = new Rectangle(params[0].toString(), Double.parseDouble(params[1]), Double.parseDouble(params[2]));
+
+        switch (shape) {
+            case "Circle":
+                String[] paramsC = paramsCircle(obj);
+                shapeObj = new Cirlce(paramsC[0].toString(), Double.parseDouble(paramsC[1]));
+                break;
+            case "Triangle":
+                String[] paramsT = paramsTriangle(obj);
+                shapeObj = new Triangle(paramsT[0].toString(), Double.parseDouble(paramsT[1]), Double.parseDouble(paramsT[2]), Double.parseDouble(paramsT[3]));
+                break;
+            case "Rectangle":
+                String[] paramsR = paramsRectangle(obj);
+                shapeObj = new Rectangle(paramsR[0].toString(), Double.parseDouble(paramsR[1]), Double.parseDouble(paramsR[2]));
         }
-        if (shape.equals("Triangle")) {
-            String[] params = paramsTriangle(obj);
-            shapeObj = new Triangle(params[0].toString(), Double.parseDouble(params[1]), Double.parseDouble(params[2]), Double.parseDouble(params[3]));
-        }
-        if (shape.equals("Circle")) {
-            String[] params = paramsCircle(obj);
-            shapeObj = new Cirlce(params[0].toString(), Double.parseDouble(params[1]));
-        }
+
         return shapeObj;
     }
 
     public static String[] paramsRectangle(String params) {
         String[] paramsList = new String[3];
-        paramsList[0] = params.substring(params.indexOf(":")+1, params.lastIndexOf(":"));
-        paramsList[1] = params.substring(params.lastIndexOf(":")+1, params.indexOf(","));
+        paramsList[0] = params.substring(params.indexOf(":") + 1, params.lastIndexOf(":"));
+        paramsList[1] = params.substring(params.lastIndexOf(":") + 1, params.indexOf(","));
         paramsList[2] = params.substring(params.indexOf(","), params.length());
         return paramsList;
     }
 
     public static String[] paramsTriangle(String params) {
         String[] paramsList = new String[4];
-        paramsList[0] = params.substring(params.indexOf(":")+1, params.lastIndexOf(":"));
-        paramsList[1] = params.substring(params.lastIndexOf(":")+1, params.indexOf(","));
-        paramsList[2] = params.substring(params.indexOf(",")+1, params.lastIndexOf(","));
-        paramsList[3] = params.substring(params.lastIndexOf(",")+1, params.length());
+        paramsList[0] = params.substring(params.indexOf(":") + 1, params.lastIndexOf(":"));
+        paramsList[1] = params.substring(params.lastIndexOf(":") + 1, params.indexOf(","));
+        paramsList[2] = params.substring(params.indexOf(",") + 1, params.lastIndexOf(","));
+        paramsList[3] = params.substring(params.lastIndexOf(",") + 1, params.length());
         return paramsList;
     }
 
     public static String[] paramsCircle(String params) {
         String[] paramsList = new String[2];
-        paramsList[0] = params.substring(params.indexOf(":")+1, params.lastIndexOf(":"));
-        paramsList[1] = params.substring(params.lastIndexOf(":")+1, params.length());
+        paramsList[0] = params.substring(params.indexOf(":") + 1, params.lastIndexOf(":"));
+        paramsList[1] = params.substring(params.lastIndexOf(":") + 1, params.length());
         return paramsList;
     }
 
