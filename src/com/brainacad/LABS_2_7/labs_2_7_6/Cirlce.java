@@ -21,6 +21,18 @@ public class Cirlce extends Shape {
         return area;
     }
 
+    public static Cirlce parseCircle(String param) throws NullPointerException{
+        Cirlce rectObj = null;
+        String rectangle = param.substring(0, param.indexOf(":"));
+        if (rectangle.equals("Circle")) {
+            String[] parameters = new String[2];
+            parameters[0] = param.substring(param.indexOf(":") + 1, param.lastIndexOf(":"));
+            parameters[1] = param.substring(param.lastIndexOf(":") + 1, param.length());
+            rectObj = new Cirlce(parameters[0].toString(), Double.parseDouble(parameters[1].toString()));
+        }
+        return rectObj;
+    }
+
     @Override
     public String toString() {
         return super.toString() +  '\n' + "Shape area is = " + calcArea();

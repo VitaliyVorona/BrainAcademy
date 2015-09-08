@@ -12,8 +12,12 @@ public class Main {
     public static void main(String[] args) {
         Shape circle = Shape.parseShape("Circle:BLACK:10");
         Shape triangle = Shape.parseShape("Triangle:GREEN:9,7,12");
+        Shape rectangle = Shape.parseShape("Rectangle:RED:10,20");
         System.out.println(triangle.toString());
         System.out.println(circle.toString());
+        System.out.println(rectangle.toString());
+        /*Rectangle rectangle = Rectangle.parseRectangle("Rectangle:RED:10,20");
+        System.out.println(rectangle.toString());*/
     }
 
 }

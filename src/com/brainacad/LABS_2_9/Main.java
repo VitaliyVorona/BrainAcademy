@@ -1,27 +1,31 @@
 package com.brainacad.LABS_2_9;
 
+import com.brainacad.LABS_2_7.labs_2_7_6.Shape;
+
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 /**
  * Created by User on 02.09.2015.
  */
 public class Main {
     public static void main(String[] args) {
-        Integer x1 = 67;
-        Integer x2 = new Integer(267);
-        Integer x6 = new Integer("267");
-        Integer x3 = Integer.valueOf(267);
-        Integer x4 = Integer.parseInt("267");
-        Integer x5 = Integer.valueOf("267");
+        Scanner scanner = new Scanner(new InputStreamReader((System.in)));
+        String line = scanner.nextLine();
+        int numOfShapes = Integer.parseInt(line);
+        System.out.println(line);
 
-        System.out.println(x1.equals(x1));
-        System.out.println(x1.equals(x2));
-        System.out.println(x1.equals(x3));
-        System.out.println(x1.equals(x4));
-        System.out.println(x1.equals(x5));
-        System.out.println(x1.equals(x6));
-
-        System.out.println(compute((byte) 12, -3));
-        test("Rectangle:RED:10,20");
-
+        Shape[] shapes = new Shape[numOfShapes];
+        for (int i = 0; i < numOfShapes; i++) {
+            line = scanner.nextLine();
+            shapes[i] = Shape.parseShape(line);
+        }
+        for (Shape i : shapes){
+            i.draw();
+        }
+        scanner.close();
     }
 
     public static Long compute(Byte b, Integer i) {
@@ -31,10 +35,9 @@ public class Main {
 
     public static String test(String test) {
         String a = test.substring(0, test.indexOf(":"));
-        if (a.equals("Rectangle")){
+        if (a.equals("Rectangle")) {
             System.out.println("Rectangle");
-        }
-        else System.out.println("Nothing matched");
-            return "Rectangle";
-        }
+        } else System.out.println("Nothing matched");
+        return "Rectangle";
     }
+}

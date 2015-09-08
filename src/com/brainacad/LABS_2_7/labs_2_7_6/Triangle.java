@@ -15,6 +15,20 @@ public class Triangle extends Shape {
         this.c = c;
     }
 
+    public static Triangle parseTriangle(String param) throws NullPointerException{
+        Triangle rectObj = null;
+        String rectangle = param.substring(0, param.indexOf(":"));
+        if (rectangle.equals("Triangle")) {
+            String[] parameters = new String[4];
+            parameters[0] = param.substring(param.indexOf(":") + 1, param.lastIndexOf(":"));
+            parameters[1] = param.substring(param.lastIndexOf(":") + 1, param.indexOf(","));
+            parameters[2] = param.substring(param.indexOf(",") + 1, param.lastIndexOf(","));
+            parameters[3] = param.substring(param.lastIndexOf(",") + 1, param.length());
+            rectObj = new Triangle(parameters[0].toString(), Double.parseDouble(parameters[1].toString()), Double.parseDouble(parameters[2].toString()), Double.parseDouble(parameters[3].toString()));
+        }
+        return rectObj;
+    }
+
     @Override
     public double calcArea() {
         double x = (a + b + c)/2;
