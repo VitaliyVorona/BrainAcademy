@@ -1,11 +1,9 @@
 package com.brainacad.LABS_2_9;
-
 import com.brainacad.LABS_2_7.labs_2_7_6.Shape;
-
-import java.io.BufferedInputStream;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+
+
 
 /**
  * Created by User on 02.09.2015.
