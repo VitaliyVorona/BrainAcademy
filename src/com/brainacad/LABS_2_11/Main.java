@@ -1,5 +1,7 @@
 package com.brainacad.LABS_2_11;
 
+import com.brainacad.LABS_2_11.labs_2_11_3.UniqueChars;
+
 /**
  * Created by User on 07.09.2015.
  */
@@ -8,11 +10,17 @@ public class Main {
         System.out.println("Hello World");
         String myStr1 = "Cartoon";
         String myStr2 = "Tomcat";
+        String test = "asdfasdfasdffeeebfhfhgfh";
         char[] ch = uniqueChars("asdfasdfasdffeeebfhfhgfh");
-        for (char i : ch){
+        for (char i : ch) {
             System.out.println(i);
         }
         printAbsentLetters(myStr1, myStr2);
+        UniqueChars chars = new UniqueChars();
+        char[] testCh = chars.uniqueChars(test);
+        for (char i : testCh) {
+            System.out.println( " sec = " + i);
+        }
     }
 
     public static String reverseString(String arg) {

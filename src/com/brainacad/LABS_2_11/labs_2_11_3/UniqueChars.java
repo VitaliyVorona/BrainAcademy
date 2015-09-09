@@ -8,9 +8,11 @@ public class UniqueChars {
     public char[] uniqueChars(String s) {
         char[] nonUniqueChars = s.toCharArray();
         char[] uniqueChars = new char[s.length()];
+        int j = 0;
         for (char i :  nonUniqueChars) {
-            if (s.startsWith(String.valueOf(i)) == s.endsWith(String.valueOf(i))){
-                uniqueChars[i] = i;
+            if (s.indexOf(String.valueOf(i)) == s.lastIndexOf(String.valueOf(i))){
+                uniqueChars[j] = i;
+                j++;
             }
         }
         return uniqueChars;
