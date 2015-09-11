@@ -1,26 +1,30 @@
 package com.brainacad.LABS_2_11;
-
-import com.brainacad.LABS_2_11.labs_2_11_3.UniqueChars;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by User on 07.09.2015.
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
-        String myStr1 = "Cartoon";
-        String myStr2 = "Tomcat";
-        String test = "asdfasdfasdffeeebfhfhgfh";
-        char[] ch = uniqueChars("asdfasdfasdffeeebfhfhgfh");
-        for (char i : ch) {
-            System.out.println(i);
-        }
-        printAbsentLetters(myStr1, myStr2);
-        UniqueChars chars = new UniqueChars();
-        char[] testCh = chars.uniqueChars(test);
-        for (char i : testCh) {
-            System.out.println( " sec = " + i);
-        }
+
+//        String myStr = "This is String, split by StringTokenizer. Created by Student:Name of Student";
+//        StringTokenizer tokenizer = new StringTokenizer(myStr);
+//
+//        String delims = ", .";
+//        StringTokenizer tokens = new StringTokenizer(myStr, delims);
+//        while (tokens.hasMoreElements()) {
+//            System.out.println(tokens.nextElement());
+//        }
+        System.out.println(checkPersonWithRegExp("Vova"));
+    }
+
+    public static boolean checkPersonWithRegExp(String userNameString) {
+//        boolean check;
+
+        Pattern pattern = Pattern.compile("[A-Z][a-z]*");
+        Matcher matcher = pattern.matcher(userNameString);
+        return matcher.matches();
     }
 
     public static String reverseString(String arg) {
