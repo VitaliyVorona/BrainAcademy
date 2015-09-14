@@ -21,9 +21,10 @@ public class MyPhone {
     }
 
     public void switchOn() {
-        System.out.println("Loading PhoneBook records…");
+        System.out.print("Loading PhoneBook records...");
+        System.out.print("OK!");
         fillMyPhoneBook(myPhoneBook, 10);
-        System.out.println("OK!");
+        myPhoneBook.sortByName();
     }
 
     private void fillMyPhoneBook(MyPhoneBook myPhoneBook, int count){
