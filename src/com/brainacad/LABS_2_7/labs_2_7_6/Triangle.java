@@ -24,7 +24,7 @@ public class Triangle extends Shape {
 
     @Override
     public String toString() {
-        return super.toString() + '\t' + "a = " + a + ", b = " + b + ", c = " + c + '\n' + "Shape area is: " + calcArea();
+        return super.toString() + '\t' + "a = " + a + ", b = " + b + ", c = " + c  + "Shape area is: " + calcArea();
     }
 
     @Override

@@ -1,14 +1,24 @@
 package com.brainacad.LABS_2_7.labs_2_7_6;
+
 import com.brainacad.LABS_2_8.labs_2_8_1.Drawable;
 
 /**
  * Created by User on 31.08.2015.
  */
-public abstract class Shape implements Drawable, Comparable{
+public abstract class Shape implements Drawable, Comparable {
     private String shapeColor;
 
-    public void draw(){
+    public void draw() {
         System.out.println(this.toString());
+    }
+
+    public void parseShape(String shape) {
+        String shapeObj = shape.substring(0, shape.indexOf(":"));
+        if (shapeObj.equals("Triangle")){
+            int a, b, c = 0;
+
+            }
+
     }
 
     public Shape(String shapeColor) {

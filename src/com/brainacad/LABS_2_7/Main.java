@@ -5,6 +5,8 @@ import com.brainacad.LABS_2_7.labs_2_7_6.Rectangle;
 import com.brainacad.LABS_2_7.labs_2_7_6.Shape;
 import com.brainacad.LABS_2_7.labs_2_7_6.Triangle;
 
+import java.util.Arrays;
+
 /**
  * Created by User on 26.08.2015.
  */
@@ -18,11 +20,13 @@ public class Main {
         Cirlce cirlce1 = new Cirlce("RANGE", 5);
         Cirlce cirlce2 = new Cirlce("ORANGE", 10);
         Rectangle rectangle1 = new Rectangle("BLUE", 4, 5);
-        Rectangle rectangle2 = new Rectangle("YELLOW", 4, 5);
+        Rectangle rectangle2 = new Rectangle("YELLOW", 40, 5);
 
         Triangle triangle1 = new Triangle("RED", 25, 5, 5);
 
         Shape[] shapes = new Shape[]{triangle1, cirlce1, cirlce2, rectangle1, rectangle2};
+        Arrays.sort(shapes);
+
         System.out.println(rectangle1.compareTo(cirlce1));
         for (Shape i : shapes) {
             i.draw();

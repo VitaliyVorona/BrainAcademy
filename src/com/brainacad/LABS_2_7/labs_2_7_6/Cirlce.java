@@ -7,7 +7,6 @@ import static java.lang.Math.*;
  * Created by User on 31.08.2015.
  */
 public class Cirlce extends Shape {
-    private String color;
     private double radius;
 
     public Cirlce(String color, double radius) {
@@ -23,7 +22,7 @@ public class Cirlce extends Shape {
 
     @Override
     public String toString() {
-        return super.toString() +  '\n' + "Shape area is = " + calcArea();
+        return super.toString() + "Shape area is = " + calcArea();
     }
 
     @Override
