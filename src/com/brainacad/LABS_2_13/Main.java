@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World");
         MyPhoneBook phoneBook = new MyPhoneBook();
-        fillMyPhoneBook(phoneBook, 5);
+        fillMyPhoneBook(phoneBook, 10);
+        phoneBook.sortByPhoneNumber();
         phoneBook.printPhoneBook();
     }
 

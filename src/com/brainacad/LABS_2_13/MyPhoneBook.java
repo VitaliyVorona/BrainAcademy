@@ -1,5 +1,9 @@
 package com.brainacad.LABS_2_13;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Objects;
+
 /**
  * Created by User on 14.09.2015.
  */
@@ -8,11 +12,26 @@ public class MyPhoneBook {
     private PhoneNumber[] phoneNumbers = new PhoneNumber[10];
 
     public void sortByName() {
-
+        Comparator sortPhoneNames = new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                PhoneNumber obj = (PhoneNumber) o1;
+                PhoneNumber obj2 = (PhoneNumber) o2;
+                return obj.getName().compareTo(obj2.getName());
+            }
+        };
+        Arrays.sort(phoneNumbers, sortPhoneNames);
     }
 
     public void sortByPhoneNumber() {
-
+        Arrays.sort(phoneNumbers, new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                PhoneNumber obj1 = (PhoneNumber)o1;
+                PhoneNumber obj2 = (PhoneNumber)o2;
+                return obj1.getPhone().compareTo(obj2.getPhone());
+            }
+        });
     }
 
     public PhoneNumber addPhoneNumber(String name, String phone) {
