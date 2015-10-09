@@ -1,4 +1,4 @@
-package com.brainacad.LABS_2_17_Mutlythreading.Task1_Task1_2_Notify;
+package com.brainacad.LABS_2_17_Mutlythreading.Task1_SubTask1_2_Notify;
 
 /**
  * Created by Groovy on 09-Oct-15.

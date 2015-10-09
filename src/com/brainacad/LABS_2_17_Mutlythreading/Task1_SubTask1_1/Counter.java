@@ -1,4 +1,4 @@
-package com.brainacad.LABS_2_17_Mutlythreading.Task1_Task1_1;
+package com.brainacad.LABS_2_17_Mutlythreading.Task1_SubTask1_1;
 
 /**
  * Created by Groovy on 09-Oct-15.
