@@ -11,9 +11,9 @@ public class Main {
         final MyObject object3 = new MyObject("3");
 
 
-        Thread thread1 = new MyThread(1, 2, object1, object2, object3);
-        Thread thread2 = new MyThread(2, 3, object2, object3, object1);
-        Thread thread3 = new MyThread(3, 1, object3, object1, object2);
+        Thread thread1 = new MyThread(1, object1, object2, object3);
+        Thread thread2 = new MyThread(2, object2, object3, object1);
+        Thread thread3 = new MyThread(3, object3, object1, object2);
 
         thread1.start();
         thread2.start();
