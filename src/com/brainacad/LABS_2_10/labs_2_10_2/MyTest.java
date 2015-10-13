@@ -7,4 +7,15 @@ public class MyTest {
     public void test() throws MyException {
 
     }
+
+    public static void main(String[] args) {
+        testExcp();
+    }
+
+    public static int testExcp(){
+        int x = 120;
+        assert x == 10 : "wtf";
+        System.out.println("OK");
+        return x;
+    }
 }
