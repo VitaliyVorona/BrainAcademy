@@ -1,4 +1,5 @@
 package com.brainacad.LABS_2_11;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -7,16 +8,18 @@ import java.util.regex.Pattern;
  */
 public class Main {
     public static void main(String[] args) {
+        String day = "SunDay";
+        day = day.replace('D', 'Z').substring(3);
+        System.out.println(day);
+    }
 
-//        String myStr = "This is String, split by StringTokenizer. Created by Student:Name of Student";
-//        StringTokenizer tokenizer = new StringTokenizer(myStr);
-//
-//        String delims = ", .";
-//        StringTokenizer tokens = new StringTokenizer(myStr, delims);
-//        while (tokens.hasMoreElements()) {
-//            System.out.println(tokens.nextElement());
-//        }
-        System.out.println(checkPersonWithRegExp("Vova"));
+    public static void uniqueChars(String a, String b) {
+        char[] charsA = a.toLowerCase().toCharArray();
+        for (char c : charsA) {
+                if (!b.toLowerCase().contains(String.valueOf(c))){
+                    System.out.println(c);
+                }
+            }
     }
 
     public static boolean checkPersonWithRegExp(String userNameString) {

@@ -9,7 +9,10 @@ public class Counter implements Runnable {
 
     @Override
     public void run() {
-        count();
+        synchronized (this){
+            count();
+            notify();
+        }
     }
 
     public Storage count() {

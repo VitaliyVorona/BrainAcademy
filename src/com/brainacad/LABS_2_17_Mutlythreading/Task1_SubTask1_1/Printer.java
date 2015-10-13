@@ -16,9 +16,12 @@ public class Printer implements Runnable {
     @Override
     public void run() {
         threadCounter.start();
-        Storage storage = counter.count();
-        for (int i : storage.value) {
-            System.out.println(i);
+        synchronized (threadCounter){
+
+            Storage storage = counter.count();
+            for (int i : storage.value) {
+                System.out.println(i);
+            }
         }
     }
 }
